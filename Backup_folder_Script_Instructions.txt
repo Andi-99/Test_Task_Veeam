@@ -1,0 +1,23 @@
+This PowerShell script synchronizes the contents of a source folder with a replica folder, ensuring that the replica folder is an exact copy of the source folder. The script logs all file operations to a specified log file and outputs the same information to the console.
+
+	~ Features ~
+-> One-way synchronization: Content in the replica folder is updated to match the source folder.
+-> Logging: All operations (file creation, copying, and removal) are logged to a specified file and the console.
+-> Path Validation: Ensures the provided paths are valid directories.
+
+	~ Instructions ~
+
+1) Start the Script: The script begins by displaying "Starting script" and logs the current date and time.
+2) Input Validation: The user is prompted to enter the source and replica folder paths. The script validates these paths to ensure they are valid directories.
+3) Verify Replica Folder: The script checks if the replica folder exists. If not, it creates the folder.
+4) Verify Log File: The script checks if the log file exists. If not, it creates a new log file and logs the start time.
+	 ~ Synchronize Folders ~
+-> The script loops through all items in the source folder.
+-> It copies directories and files from the source folder to the replica folder.
+-> Remove Non-synced Items: The script removes any items in the replica folder that are not present in the source folder.
+-> Log Completion: The script logs the completion of the synchronization process.
+
+	~ Notes ~
+
+Ensure that you have the necessary permissions to read from the source folder and write to the replica folder.
+The script excludes the log file from being copied to the replica folder to avoid conflicts.
